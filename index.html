@@ -1,435 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Rock3D Portfolio</title>
-
-
-<style>
-
-body {
-
-    font-family: Arial, Helvetica, sans-serif;
-
-    max-width: 1000px;
-
-    margin: auto;
-
-    padding: 40px 25px;
-
-    line-height: 1.7;
-
-    color: #222;
-
-    background: #ffffff;
-
-}
-
-
-h1 {
-
-    font-size: 52px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.subtitle {
-
-    font-size: 24px;
-
-    color: #555;
-
-}
-
-
-.info {
-
-    margin-top: 15px;
-
-    color: #666;
-
-    font-size: 17px;
-
-}
-
-
-.card {
-
-    margin-top: 35px;
-
-    padding: 30px;
-
-    background: #f6f6f6;
-
-    border-radius: 15px;
-
-}
-
-
-h2 {
-
-    margin-top: 0;
-
-    font-size: 28px;
-
-}
-
-
-.pipeline {
-
-    background: white;
-
-    padding: 25px;
-
-    border-radius: 12px;
-
-    text-align: center;
-
-    font-size: 20px;
-
-}
-
-
-.pipeline span {
-
-    display: block;
-
-    margin: 8px;
-
-}
-
-
-.video-box {
-
-    margin-top: 20px;
-
-}
-
-
-video {
-
-    width: 100%;
-
-    border-radius: 12px;
-
-    background: black;
-
-}
-
-
-.highlight {
-
-    background: white;
-
-    padding: 20px;
-
-    border-radius: 10px;
-
-}
-
-
-ul {
-
-    padding-left: 25px;
-
-}
-
-
-.footer {
-
-    margin-top: 50px;
-
-    text-align: center;
-
-    color: #777;
-
-}
-
-
-</style>
-
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rock3D portfolio showcase: UAV imagery, multi-view verified surface completion, and 3D rock measurement.">
+  <title>Rock3D | UAV Photogrammetry &amp; 3D Measurement</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-
-
 <body>
-
-
-
-<h1>Rock3D</h1>
-
-
-<p class="subtitle">
-
-AI-driven UAV Photogrammetry and 3D Rock Measurement
-
-</p>
-
-
-
-<p class="info">
-
-Master Research Project<br>
-
-China University of Mining and Technology (Beijing)
-
-</p>
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Research Overview
-</h2>
-
-
-<p>
-
-Rock3D focuses on UAV-based rock recognition,
-
-multi-view photogrammetry, and 3D geometric measurement.
-
-The project develops a reproducible workflow from
-
-field imagery to individual rock-scale measurement.
-
-</p>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Research Pipeline
-</h2>
-
-
-
-<div class="pipeline">
-
-
-<span>
-无人机影像采集
-<br>
-UAV Image Acquisition
-</span>
-
-
-↓
-
-<span>
-AI岩块识别
-<br>
-YOLO / SAM Detection & Segmentation
-</span>
-
-
-↓
-
-<span>
-摄影测量三维重建
-<br>
-Photogrammetric 3D Reconstruction
-</span>
-
-
-↓
-
-<span>
-多视角表面关联与补充
-<br>
-Multi-view Surface Association
-</span>
-
-
-↓
-
-<span>
-岩块三维尺寸测量
-<br>
-3D Rock Measurement
-</span>
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Key Contributions
-</h2>
-
-
-
-<ul>
-
-
-<li>
-AI-based rock instance recognition from UAV imagery
-</li>
-
-
-<li>
-Multi-view photogrammetric surface association and validation
-</li>
-
-
-<li>
-3D geometric measurement workflow for individual rocks
-</li>
-
-
-<li>
-Reproducible engineering pipeline for rock analysis
-</li>
-
-
-</ul>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-3D Demonstration
-</h2>
-
-
-
-<p>
-
-<strong>
-CAL_061 Multi-view Surface Completion Showcase
-</strong>
-
-</p>
-
-
-
-<p>
-
-A supporting case demonstrating progressive verified surface gain
-from complementary UAV views.
-
-</p>
-
-
-
-<div class="video-box">
-
-
-<video controls preload="metadata">
-
-
-<source src="assets/videos/CAL_061_showcase_display_only_v1.mp4" type="video/mp4">
-
-
-Your browser does not support the video tag.
-
-
-</video>
-
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-
-
-
-<div class="card">
-
-
-<h2>
-Research Focus
-</h2>
-
-
-
-<div class="highlight">
-
-
-Computer Vision
-
-<br>
-
-Photogrammetry
-
-<br>
-
-3D Reconstruction
-
-<br>
-
-Engineering Measurement
-
-
-</div>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="footer">
-
-
-Rock3D Research Portfolio
-
-
-</div>
-
-
-
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Rock3D home">
+      <span class="brand-mark">R3</span>
+      <span>Rock3D</span>
+    </a>
+    <nav aria-label="Page sections">
+      <a href="#showcase">Showcase</a>
+      <a href="#pipeline">How it works</a>
+      <a href="#measurement">Measurement</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section" id="showcase" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Portfolio showcase · Engineering vision</p>
+        <h1 id="hero-title">Rock3D</h1>
+        <p class="hero-subtitle">AI-driven UAV Photogrammetry and 3D Rock Measurement</p>
+        <p class="hero-lead">
+          A reproducible workflow that connects field imagery to verified multi-view
+          rock surfaces and interpretable 3D measurements.
+        </p>
+        <div class="capability-list" aria-label="Core capabilities">
+          <span>Image-based identification</span>
+          <span>Multi-view verification</span>
+          <span>3D measurement</span>
+        </div>
+      </div>
+
+      <article class="video-card" aria-labelledby="video-heading">
+        <div class="card-heading">
+          <div>
+            <p class="card-kicker">Main showcase · Supporting case</p>
+            <h2 id="video-heading">Continuous Multi-view Surface Gain</h2>
+          </div>
+          <span class="case-label">CAL_061</span>
+        </div>
+        <div class="video-frame">
+          <video controls preload="metadata" playsinline poster="assets/images/CAL_061_video_poster.png">
+            <source src="assets/videos/CAL_061_showcase_display_only_v1.mp4" type="video/mp4">
+            Your browser does not support embedded MP4 video.
+            <a href="assets/videos/CAL_061_showcase_display_only_v1.mp4">Download the CAL_061 showcase video</a>.
+          </video>
+        </div>
+        <div class="video-caption">
+          <p>Complementary views add verified visible surface along one continuous camera sequence.</p>
+          <div class="caption-tags">
+            <span>4 views</span>
+            <span>2D→3D bridge</span>
+            <span>Verified union</span>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="pipeline" aria-labelledby="pipeline-title">
+      <div class="section-heading">
+        <p class="eyebrow">How it works · CAL_069</p>
+        <h2 id="pipeline-title">From an image target to verified 3D surface</h2>
+        <p>
+          The method follows the same rock across complementary views, validates the
+          visible surface contributed by each image, and builds a traceable 3D union.
+        </p>
+      </div>
+
+      <div class="pipeline-feature">
+        <figure class="media-panel overlay-panel">
+          <img src="assets/images/CAL_069_target_overlay.png" alt="CAL_069 highlighted in the DJI_0277 source image with a manual target overlay" loading="lazy">
+          <figcaption>Target correspondence in the reference image</figcaption>
+        </figure>
+
+        <div class="pipeline-steps" aria-label="Rock3D pipeline steps">
+          <div class="step">
+            <span class="step-number">01</span>
+            <div>
+              <h3>Image target selection</h3>
+              <p>Identify the same rock in a real UAV or close-range image.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">02</span>
+            <div>
+              <h3>Multi-view verification</h3>
+              <p>Inspect complementary images and retain only human-approved visible surfaces.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">03</span>
+            <div>
+              <h3>Verified surface growth</h3>
+              <p>Add each view's new contribution without resetting the rock identity.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-number">04</span>
+            <div>
+              <h3>3D geometry output</h3>
+              <p>Use the verified visible-surface union for downstream geometric interpretation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <article class="gain-card">
+        <div class="gain-copy">
+          <p class="card-kicker">Why multi-view matters</p>
+          <h3>New viewpoints reveal new verified surface</h3>
+          <p>
+            CAL_069 shows successive contributions from DJI_0169, DJI_0159, and DJI_0170.
+            The figure is supporting evidence—not the page's primary visual—so the method
+            stays understandable without turning the portfolio into a QA report.
+          </p>
+        </div>
+        <button class="image-button" type="button" aria-label="Open CAL_069 verified surface progression image" onclick="document.getElementById('gain-dialog').showModal()">
+          <img src="assets/images/CAL_069_verified_gain.png" alt="CAL_069 sequential verified new surface progression across complementary views" loading="lazy">
+          <span>Open detailed progression</span>
+        </button>
+      </article>
+
+      <dialog id="gain-dialog" class="image-dialog" onclick="if (event.target === this) this.close()">
+        <button type="button" class="dialog-close" aria-label="Close image" onclick="document.getElementById('gain-dialog').close()">×</button>
+        <img src="assets/images/CAL_069_verified_gain.png" alt="Large view of CAL_069 sequential verified new surface progression">
+      </dialog>
+
+      <p class="boundary-note">Research demonstration: the displayed geometry is a verified visible-surface union, not a claim of complete-rock ground truth.</p>
+    </section>
+
+    <section class="section measurement-section" id="measurement" aria-labelledby="measurement-title">
+      <div class="section-heading">
+        <p class="eyebrow">Measurement example · CAL_064</p>
+        <h2 id="measurement-title">3D geometry made measurable</h2>
+        <p>
+          A clean static example connects the final verified surface to an oriented
+          bounding box and three sorted geometric extents.
+        </p>
+      </div>
+
+      <article class="measurement-card">
+        <figure class="measurement-figure">
+          <img src="assets/images/CAL_064_measurement_showcase.png" alt="CAL_064 verified 3D rock surface with oriented bounding box and E1, E2, E3 measurements" loading="lazy">
+        </figure>
+        <div class="measurement-copy">
+          <span class="case-label">CAL_064</span>
+          <h3>Verified union + oriented bounding box</h3>
+          <p>
+            The display keeps the rock surface, bounding box, and measurement axes in one
+            readable frame for a fast portfolio-level explanation.
+          </p>
+          <dl class="measurement-facts">
+            <div><dt>Views</dt><dd>4</dd></div>
+            <div><dt>E1</dt><dd>528.1 mm</dd></div>
+            <div><dt>E2</dt><dd>429.9 mm</dd></div>
+            <div><dt>E3</dt><dd>392.3 mm</dd></div>
+          </dl>
+          <p class="boundary-note">Sorted OBB extents, RAW_UNCORRECTED. E1/E2/E3 are not field A/B/C.</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <strong>Rock3D</strong>
+      <span>Engineering Vision · Photogrammetry · 3D Measurement</span>
+    </div>
+    <p>Portfolio showcase · China University of Mining and Technology (Beijing)</p>
+  </footer>
 </body>
-
-
 </html>
