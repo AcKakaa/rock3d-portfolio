@@ -63,6 +63,81 @@
       </article>
     </section>
 
+    <section class="section scene-demo-section" id="scene-demo" aria-labelledby="scene-demo-title">
+      <div class="section-heading">
+        <p class="eyebrow">Scene-level demonstration</p>
+        <h2 id="scene-demo-title">From panoramic rock recognition to 3D scene</h2>
+        <p>
+          A scene-level demonstration connecting panoramic rock imagery,
+          instance-level recognition, and reconstructed 3D geometry.
+        </p>
+      </div>
+
+      <div class="scene-demo-grid">
+        <article class="scene-card">
+          <div class="scene-card-copy">
+            <span class="scene-step">01</span>
+            <div>
+              <p class="card-kicker">Input scene</p>
+              <h3>Panoramic Rock Scene</h3>
+              <p>Wide-view field imagery covering the rock pile scene.</p>
+            </div>
+          </div>
+          <figure class="scene-media">
+            <img src="assets/images/DJI_0151.jpg" alt="Panoramic input image of the full rock pile scene" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-card-copy">
+            <span class="scene-step">02</span>
+            <div>
+              <p class="card-kicker">2D recognition</p>
+              <h3>Scene-level Rock Recognition</h3>
+              <p>Instance masks visualize recognized rocks across the panoramic scene.</p>
+            </div>
+          </div>
+          <figure class="scene-media">
+            <img src="assets/images/image151_showcase_overlay_v1_1_QA.png" alt="Color instance-mask overlay across the panoramic DJI_0151 rock scene" loading="lazy">
+          </figure>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-card-copy">
+            <span class="scene-step">03</span>
+            <div>
+              <p class="card-kicker">3D scene</p>
+              <h3>Reconstructed 3D Scene</h3>
+              <p>A compact 3D scene demonstration derived from the photogrammetric reconstruction.</p>
+            </div>
+          </div>
+          <figure class="scene-media scene-video-media">
+            <video autoplay loop muted playsinline controls preload="metadata" aria-label="Looping demonstration of the reconstructed Rock3D scene">
+              <source src="assets/videos/rock3d_scene_demo.mp4" type="video/mp4">
+              Your browser does not support embedded MP4 video.
+              <a href="assets/videos/rock3d_scene_demo.mp4">Download the reconstructed 3D scene video</a>.
+            </video>
+          </figure>
+        </article>
+
+        <article class="scene-card">
+          <div class="scene-card-copy">
+            <span class="scene-step">04</span>
+            <div>
+              <p class="card-kicker">Local detail</p>
+              <h3>Local Recognition Detail</h3>
+              <p>A closer view showing instance-level recognition at local image scale.</p>
+            </div>
+          </div>
+          <figure class="scene-media">
+            <img src="assets/images/DJI_0277_local_display_clean_v1_QA.png" alt="Local close-up with clean color instance masks on recognized rocks" loading="lazy">
+          </figure>
+        </article>
+      </div>
+
+      <p class="boundary-note">Portfolio demonstration only. This section does not introduce a new research result or change the frozen 2D method.</p>
+    </section>
+
     <section class="section" id="pipeline" aria-labelledby="pipeline-title">
       <div class="section-heading">
         <p class="eyebrow">How it works · CAL_069</p>
