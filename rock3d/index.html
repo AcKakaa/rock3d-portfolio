@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#080f11">
+  <meta name="description" content="Rock3D：连接无人机影像、岩石实例识别、多视角三维表面与几何测量的研究项目。">
+  <title>Rock3D｜从无人机影像到岩石三维几何测量</title>
+  <link rel="stylesheet" href="styles.preview.css"><link rel="stylesheet" href="slope.preview.css"><link rel="stylesheet" href="journey.preview.css"><script src="script.preview.js" defer></script><script src="slope.preview.js" defer></script><script src="journey.preview.js" defer></script>
+  <link rel="stylesheet" href="../project-nav.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳转到项目内容</a>
+  <div class="portfolio-switcher"><div class="portfolio-switcher-inner">
+  <a class="portfolio-home" href="../"><span aria-hidden="true">←</span> 项目总览</a>
+  <nav class="portfolio-projects" aria-label="切换项目"><a href="../rock3d/" aria-current="page">Rock3D</a><a href="../hyperspectral/">高光谱 × 三维地质</a></nav>
+</div></div>
+  <header class="header">
+    <a class="brand" href="#top" aria-label="Rock3D 首页"><svg class="brand-icon" viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="M16 2 30 10v16L16 34 2 26V10L16 2Z M2 10l14 8 14-8 M16 18v16 M16 2v16"/></svg><span>Rock<span class="accent">3D</span></span><span class="brand-divider"></span><span class="brand-caption">工程视觉 · 三维测量</span></a>
+    <nav aria-label="页面导航"><a href="#showcase">成果展示</a><a href="#engineering">项目工作</a><a href="#industry" class="nav-detail">应用演示 <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero container" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> UAV IMAGERY × COMPUTER VISION</p>
+        <h1 id="hero-title">从无人机影像<br>到岩石三维<br><span class="accent">几何测量。</span></h1>
+        <p class="hero-description">融合实例分割与摄影测量几何，<br class="desktop-break">让二维目标与三维表面建立可追踪的联系。</p>
+        <div class="hero-actions"><button class="button primary" data-open-video><svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="m7 4 9 6-9 6z"/></svg>观看项目演示</button><a class="text-link" href="#engineering">了解项目工作 <span aria-hidden="true">↗</span></a></div>
+        <div class="hero-meta"><span>实例识别</span><i></i><span>多视角几何</span><i></i><span>可复现流程</span></div>
+      </div>
+      <div class="model-panel" id="case-3d">
+        <div class="model-heading"><span><span class="small-cross" aria-hidden="true">+</span> MULTI-VIEW SURFACE</span><span class="model-case">CAL_061</span></div>
+        <div class="model-view" id="model-view">
+          <img class="model-fallback" id="model-fallback" src="assets/preview/cal061-surface.webp" width="1200" height="780" alt="CAL_061 已保存的多视角可见表面，颜色对应不同视角贡献">
+          <canvas id="rock-canvas" width="1000" height="720" tabindex="0" role="img" aria-label="CAL_061 三维可见表面，可拖动旋转，也可用方向键旋转；下方按钮切换逐视角贡献"></canvas>
+          <span class="viewer-hint"><svg viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M3 7a6 6 0 0 1 11-2M15 11A6 6 0 0 1 4 13M14 2v4h-4M4 16v-4h4"/></svg><span id="viewer-hint-text">拖动旋转 · 观察表面</span></span>
+          <button id="rotation-toggle" class="rotation-toggle" type="button" aria-label="暂停模型自动旋转" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button>
+        </div>
+        <div class="model-bottom">
+          <div class="model-caption"><span class="status-dot"></span><span id="stage-caption" aria-live="polite">多视角表面整合</span><span class="caption-secondary">逐视角贡献</span></div>
+          <div class="stage-tabs" role="group" aria-label="查看逐视角表面整合">
+            <button type="button" data-stage="0" aria-pressed="false"><span class="stage-dot s0"></span>参考视角</button><button type="button" data-stage="1" aria-pressed="false"><span class="stage-dot s1"></span>新增视角 Ⅰ</button><button type="button" data-stage="2" aria-pressed="false"><span class="stage-dot s2"></span>新增视角 Ⅱ</button><button type="button" data-stage="3" aria-pressed="true"><span class="stage-dot s3"></span>整合表面</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="pipeline container" aria-label="项目技术链路">
+      <div><span class="pipeline-index">01</span><span>无人机影像</span><small>UAV imagery</small></div><span class="pipeline-arrow" aria-hidden="true">↗</span><div><span class="pipeline-index">02</span><span>岩石实例识别</span><small>Instance segmentation</small></div><span class="pipeline-arrow" aria-hidden="true">↗</span><div><span class="pipeline-index">03</span><span>多视角表面关联</span><small>Multi-view association</small></div><span class="pipeline-arrow" aria-hidden="true">↗</span><div><span class="pipeline-index">04</span><span>三维几何测量</span><small>Geometric measurement</small></div>
+    </div>
+    <section class="showcase container section" id="showcase" aria-labelledby="showcase-title">
+      <div class="section-head"><div><p class="eyebrow">PROJECT IN ACTION</p><h2 id="showcase-title">真实场景，直观成果。</h2></div><p class="section-intro">从一张影像中的目标，<br>到可以观察、分析的三维表面。</p></div>
+      <article class="scene-journey" id="journey" aria-labelledby="journey-title">
+        <div class="journey-heading"><div><p class="card-index">FIELD → REGION → INSTANCE → 3D</p><h3 id="journey-title">从现场，找到一块岩石。</h3></div><button type="button" id="journey-play" aria-pressed="false" disabled>▷ 播放过程</button></div>
+        <div class="journey-steps" role="group" aria-label="查看从现场全景到三维表面的过程">
+          <button type="button" data-journey-step="0" aria-pressed="true"><span>01</span><strong>现场全景</strong><small>建立场景语境</small></button>
+          <button type="button" data-journey-step="1" aria-pressed="false" disabled><span>02</span><strong>CAL 区识别</strong><small>分离岩石实例</small></button>
+          <button type="button" data-journey-step="2" aria-pressed="false" disabled><span>03</span><strong>锁定 CAL_061</strong><small>确认目标身份</small></button>
+          <button type="button" data-journey-step="3" aria-pressed="false" disabled><span>04</span><strong>三维表面</strong><small>关联互补视角</small></button>
+        </div>
+        <div class="journey-body">
+          <div class="journey-main">
+            <div class="journey-viewport" id="journey-viewport" data-step="0">
+              <div class="journey-scene journey-layer is-active" data-journey-layer="scene"><img src="assets/preview/scene-original-1600.webp" width="1600" height="886" alt="DJI_0151 现场全景，前景可见红白标尺与现场标识板" loading="lazy"><svg class="journey-guide" viewBox="0 0 1600 886" aria-hidden="true"><rect x="120" y="600" width="500" height="286" rx="10"/><path d="M120 625v-25h25m450 0h25v25m0 236v25h-25m-450 0h-25v-25"/><rect class="journey-guide-label" x="135" y="550" width="325" height="48" rx="5"/><text x="155" y="582">CAL 可搬移区 · 近景入口 ↗</text></svg><button type="button" class="journey-region-hit" id="journey-enter-region" aria-label="进入可搬移区 CAL 的 DJI_0277 近景" disabled></button></div>
+              <svg class="journey-cal journey-layer" data-journey-layer="cal" id="journey-cal" viewBox="0 0 2400 1600" role="img" aria-label="DJI_0277 岩石实例识别与 CAL_061 定位" aria-hidden="true"><image id="journey-cal-original" href="assets/journey_v1/cal-original.webp" width="2400" height="1600"/><image id="journey-cal-recognition" href="assets/journey_v1/cal-recognition.webp" width="2400" height="1600"/><polygon id="journey-target"/><g id="journey-target-label"><rect width="290" height="85" rx="9"/><text x="22" y="54">CAL_061 ↗</text></g></svg>
+              <div class="journey-surface journey-layer" data-journey-layer="surface" aria-hidden="true"><img src="assets/preview/cal061-surface.webp" width="1200" height="780" alt="同一 CAL_061 的已保存多视角可见表面，颜色表示视角贡献" loading="lazy"><button type="button" id="journey-video"><span class="journey-video-icon" aria-hidden="true">▷</span>播放多视角整合演示</button></div>
+              <span class="journey-camera" id="journey-camera">DJI_0151 / 现场总览</span><span class="journey-visual-note" id="journey-visual-note">点击框选区域，进入近景</span>
+            </div>
+            <div class="journey-view-footer"><span id="journey-view-caption">从堆积场景中，找到进一步观察的区域。</span><button type="button" id="journey-next" disabled>下一步 <span aria-hidden="true">→</span></button></div>
+          </div>
+          <aside class="journey-story" aria-label="当前步骤说明">
+            <p class="journey-step-number" id="journey-step-number">01 / FIELD CONTEXT</p><h4 id="journey-story-title">先看现场，<br>再看每一块岩石。</h4><p id="journey-story-copy">全景呈现堆积形态与现场环境；进入可搬移区（CAL），观察单块岩石的几何细节。</p>
+            <div class="journey-mini-trail" aria-label="同一案例的二维与三维对应"><figure><img src="assets/journey_v1/cal061-context.webp" width="900" height="600" alt="CAL_061 在 DJI_0277 中的原始影像" loading="lazy"><figcaption>二维影像 · CAL_061</figcaption></figure><span aria-hidden="true">↓</span><figure><img src="assets/preview/cal061-surface.webp" width="1200" height="780" alt="CAL_061 多视角可见表面" loading="lazy"><figcaption>三维表面 · 同一目标</figcaption></figure></div>
+            <a href="#case-3d" class="journey-model-link">操作 CAL_061 三维模型 <span aria-hidden="true">↗</span></a>
+          </aside>
+        </div>
+        <div class="journey-bottom"><span><i></i>真实影像 · 已保存识别结果 · 同一案例可追踪</span><details><summary>素材对应与展示说明</summary><p>全景来自 DJI_0151，导览框围绕可见现场标识物设置，仅用于展示定位，非测绘区域边界。进入 CAL 区时切换至 DJI_0277，未宣称两视角已精确配准。识别图复用已保存的 EVAL2D-006L 结果；CAL_061 的目标轮廓来自该冻结三维案例使用的人工标注。第三步缩放同一 DJI_0277 原图，第四步复用同一 CAL_061 的已核验可见表面。此导览不运行新识别，不改变研究结果。</p></details></div>
+      </article>
+      <article class="recognition-feature">
+        <div class="comparison" id="comparison">
+          <img class="comparison-image" src="assets/preview/scene-original-1600.webp" srcset="assets/preview/scene-original-800.webp 800w, assets/preview/scene-original-1600.webp 1600w" sizes="(max-width: 800px) 95vw, 75vw" width="1600" height="1067" alt="DJI_0151 无人机拍摄的岩石堆实景" loading="lazy">
+          <div class="comparison-overlay"><img class="comparison-image" src="assets/preview/scene-segmentation-1600.webp" srcset="assets/preview/scene-segmentation-800.webp 800w, assets/preview/scene-segmentation-1600.webp 1600w" sizes="(max-width: 800px) 95vw, 75vw" width="1600" height="1067" alt="同一 DJI_0151 场景的岩石实例分割展示" loading="lazy"></div>
+          <span class="image-label label-before">原始影像</span><span class="image-label label-after">实例分割</span><div class="comparison-line" aria-hidden="true"><span>‹ ›</span></div><input id="comparison-slider" type="range" min="0" max="100" value="52" aria-label="拖动比较原图与实例分割结果">
+        </div>
+        <div class="recognition-copy"><div><p class="card-index">01 / RECOGNITION</p><h3>从复杂场景中，识别每一块目标。</h3><p>高分辨率实例分割，将密集岩石场景转化为可独立分析的目标。</p></div><span class="interaction-note"><span aria-hidden="true">↔</span> 拖动滑块查看对比</span></div>
+      </article>
+      <div class="result-grid">
+        <article class="surface-card">
+          <div class="card-title-row"><p class="card-index">02 / MULTI-VIEW</p><span class="case-tag">CAL_061</span></div><h3>换一个视角，获得更多表面。</h3><p>关联同一目标，逐步整合互补视角中的可见几何。</p>
+          <button class="surface-media" type="button" data-open-video aria-label="播放 CAL_061 多视角表面整合演示"><img src="assets/preview/cal061-surface.webp" width="1200" height="780" alt="CAL_061 的多视角可见表面，不同颜色表示视角贡献" loading="lazy"><span class="play-circle"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m9 5 11 7-11 7z"/></svg></span><span class="media-corner">播放多视角演示 <span aria-hidden="true">↗</span></span></button><div class="card-foot"><span>目标身份保持一致</span><span>逐视角贡献可追踪</span></div>
+        </article>
+        <article class="measurement-card">
+          <div class="card-title-row"><p class="card-index">03 / MEASUREMENT</p><span class="case-tag">CAL_064</span></div><h3>让三维几何，成为可读的尺寸。</h3><p>由已核验表面输出定向包围盒与几何尺度。</p>
+          <button class="measurement-media" type="button" id="open-measurement" aria-label="放大 CAL_064 三维表面及定向包围盒"><img src="assets/preview/cal064-measurement-800.webp" srcset="assets/preview/cal064-measurement-800.webp 800w, assets/preview/cal064-measurement-1600.webp 1600w" sizes="(max-width: 800px) 90vw, 40vw" width="1025" height="660" alt="CAL_064 可见表面和保存的 RAW 定向包围盒；青色为目标表面，红色为 OBB" loading="lazy"><span class="zoom-icon" aria-hidden="true">⤢</span></button>
+          <div class="measurements" aria-label="CAL_064 RAW OBB 几何尺寸，单位毫米"><div><span>E1</span><strong>528.1<small>mm</small></strong></div><div><span>E2</span><strong>429.9<small>mm</small></strong></div><div><span>E3</span><strong>392.3<small>mm</small></strong></div></div><p class="measurement-note">RAW OBB 几何尺寸 · E1 / E2 / E3 为排序后的包围盒边长</p>
+        </article>
+      </div>
+    </section>
+    <section class="engineering container section" id="engineering" aria-labelledby="engineering-title">
+      <div class="section-head"><div><p class="eyebrow">ALGORITHM TO ENGINEERING</p><h2 id="engineering-title">把算法连接起来，<br>让流程真正运行。</h2></div><p class="section-intro">视觉识别、空间几何与工程实现，<br>构成同一条可复现的分析链路。</p></div>
+      <div class="work-grid">
+        <article><span class="work-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="M3 10V3h7M18 3h7v7M25 18v7h-7M10 25H3v-7M9 9h10v10H9z"/></svg></span><h3>高分辨率视觉识别</h3><p>结合检测、局部分割与多尺度处理，应对密集目标与边界细节。</p><span class="work-tech">YOLO · SAM · 多尺度处理</span></article>
+        <article><span class="work-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><path d="m14 2 11 6v13l-11 6-11-6V8l11-6ZM3 8l11 6 11-6M14 14v13M7 10l14 8"/></svg></span><h3>图像与三维关联</h3><p>统一相机投影与网格坐标，通过首交表面和拓扑连通建立目标对应。</p><span class="work-tech">相机几何 · Ray casting · Mesh</span></article>
+        <article><span class="work-icon" aria-hidden="true"><svg viewBox="0 0 28 28" fill="none"><rect x="3" y="3" width="8" height="8" rx="1"/><rect x="17" y="17" width="8" height="8" rx="1"/><path d="M11 7h10v10M7 11v10h10M17 7l4-4 4 4M7 17l-4 4 4 4"/></svg></span><h3>可复现工程流程</h3><p>配置化批处理、结果缓存与逐实例 QA，保持输入、过程与输出可追踪。</p><span class="work-tech">Python · 批处理 · 质量检查</span></article>
+      </div>
+    </section>
+    <section class="industry container section" id="industry" aria-labelledby="industry-title">
+      <div class="section-head"><div><p class="eyebrow">FROM PARTICLES TO SLOPE STABILITY</p><h2 id="industry-title">从颗粒几何，<br>到边坡稳定分析。</h2></div><p class="section-intro">连接视觉测量、材料强度与边坡力学，<br>为排土场稳定性分析提供数据基础。</p></div>
+      <div class="slope-flow" aria-label="后续应用链路"><span>三维测量</span><b>→</b><span>区域 PSD</span><b>→</b><span>抗剪强度</span><b>→</b><span>边坡稳定</span></div>
+      <article class="slope-dashboard" aria-labelledby="slope-title">
+        <div class="slope-head"><div><p class="card-index">04 / GEOTECHNICAL APPLICATION</p><h3 id="slope-title">排土场边坡 · 稳定性情景仿真</h3></div><span class="slope-badge">合成剖面 · 文献示例材料</span></div>
+        <div class="slope-presets" role="group" aria-label="选择边坡工况"><button type="button" data-slope-preset="baseline" aria-pressed="true" disabled><span>01 / 基准工况</span><strong>34° <small>坡角</small></strong><p>低孔压比 · r<sub>u</sub> = 0.1</p></button><button type="button" data-slope-preset="wet" aria-pressed="false" disabled><span>02 / 孔压升高</span><strong>0.3 <small>孔压比</small></strong><p>保持坡角与材料一致</p></button><button type="button" data-slope-preset="flattened" aria-pressed="false" disabled><span>03 / 坡角减缓</span><strong>26° <small>坡角</small></strong><p>保持孔压比与材料一致</p></button></div>
+        <div class="slope-body">
+          <div class="slope-main"><div class="slope-plot-head"><span>A–A′ <small>合成二维剖面</small></span><span id="slope-search-status">载入已求解工况…</span></div>
+            <div class="slope-plot-wrap"><svg id="slope-section" viewBox="0 0 940 490" role="img" aria-label="边坡剖面与候选圆弧滑面，突出当前搜索范围内最低安全系数滑面"></svg><p class="slope-loading" id="slope-loading">载入边坡仿真结果…</p></div>
+            <div class="slope-legend"><span><i class="slip-critical"></i>最低 FoS 滑面</span><span><i class="slip-candidate"></i>候选滑面</span><button id="slope-zoom-open" type="button" disabled aria-label="放大边坡剖面">放大 ↗</button><button id="slope-replay" type="button" disabled aria-pressed="false">▷ 回放滑面搜索</button></div>
+            <div class="slope-fos-row" aria-live="polite"><div><span id="slope-fos-label">搜索范围内最小安全系数</span><strong id="slope-fos">—</strong><small>FoS · 无量纲</small></div><div class="slope-fos-explanation"><span id="slope-response">基准情景</span><p id="slope-conclusion">由有效应力与抗剪强度计算抗滑裕度。</p><small>比较受控工况，不代表现场安全结论。</small></div></div>
+            <div class="slope-controls"><div><label for="slope-angle">坡角 <output id="slope-angle-value">34°</output></label><input id="slope-angle" type="range" min="26" max="38" step="4" value="34" disabled><div class="slope-range"><span>26°</span><span>38°</span></div></div><div><label for="slope-ru">孔压比 r<sub>u</sub> <output id="slope-ru-value">0.1</output></label><input id="slope-ru" type="range" min="0" max="0.4" step="0.1" value="0.1" disabled><div class="slope-range"><span>0.0</span><span>0.4</span></div></div></div>
+          </div>
+          <aside class="slope-support" aria-label="材料与强度输入"><div class="slope-chart-head"><div><p class="card-index">MATERIAL INPUT</p><h4>级配如何进入力学分析？</h4></div><span>同一示例材料</span></div><div class="slope-chart-caption"><h5>颗粒尺寸分布 · PSD</h5><span>合成质量级配</span></div><svg id="slope-psd-chart" viewBox="0 0 370 205" role="img" aria-label="合成质量 PSD 曲线，横轴粒径毫米，纵轴累计质量通过率百分比"></svg><div class="slope-d50"><span>示例 D50</span><strong>117.9 <small>mm</small></strong><span>分布形状为假设</span></div><div class="slope-chart-caption strength-caption"><h5>B–K 非线性抗剪强度</h5><span>文献参数</span></div><svg id="slope-strength-chart" viewBox="0 0 370 205" role="img" aria-label="B–K 强度包络，横轴有效法向应力千帕，纵轴抗剪强度千帕"></svg><div class="slope-material-summary"><span>UCS <strong>14 MPa</strong></span><span>φ<sub>b</sub> <strong>26.9°</strong></span><span>R <strong>6.1</strong></span></div><p class="slope-model-note">B–K 表征抗剪强度；简化 Bishop 条分法求解安全系数。孔压比是指定工况，不是降雨或渗流模拟。</p><button id="slope-export" type="button" disabled><span>导出当前工况记录</span><span aria-hidden="true">↓</span></button></aside>
+        </div>
+        <div class="slope-comparison" id="slope-comparison" aria-label="三个受控工况的安全系数比较"></div>
+        <details class="slope-method"><summary>模型、参数来源与仿真边界 <span aria-hidden="true">+</span></summary><div><p>采用 25 m 高的合成均质边坡，重度假设为 20 kN/m³；每条候选圆弧划分为 80 个条分。Bishop 简化法忽略条间剪力，同时求解条分竖向力平衡与整体力矩平衡。显示的是有限圆弧搜索范围内的最低 FoS，不包含非圆弧、三维或位移分析。</p><p>示例强度参数参考 Arrieta &amp; Zhang（2024）的 WD-1：UCS 14 MPa、S/UCS 0.23、R 6.1、φ<sub>b</sub> 26.9°；S = 3.22 MPa。PSD 为指定 D50 的合成质量分布，未从图表外推出连续的 D50→S 关系，也未使用上方 CAL 案例尺寸。</p><p>当前 Rock3D 的真实成果提供几何测量基础。正式现场 PSD、内部材料分布、强度参数及水文条件仍需验证；本节展示独立的应用仿真，不构成现场稳定性判定。</p><p class="slope-source-links"><a href="https://link.springer.com/article/10.1007/s11440-024-02315-x" target="_blank" rel="noopener noreferrer">B–K 与 PSD 参考论文 ↗</a><a href="https://www.publications.usace.army.mil/Portals/76/Publications/EngineerManuals/EM_1110-2-1902.pdf" target="_blank" rel="noopener noreferrer">极限平衡方法参考 ↗</a></p></div></details>
+      </article>
+      <div class="slope-outlook"><span>APPLICATION OUTLOOK</span><p>识别与测量颗粒，表征堆积材料，<br><strong>让视觉数据服务边坡工程判断。</strong></p><small>后续方向：现场 PSD 验证 · 材料强度试验 · 实坡稳定性分析</small></div>
+      <dialog id="slope-zoom-dialog" class="media-dialog slope-zoom-dialog" aria-labelledby="slope-zoom-title"><div class="dialog-heading"><div><p class="eyebrow">SYNTHETIC SLOPE / A–A′</p><h2 id="slope-zoom-title">边坡剖面与候选滑面</h2></div><button type="button" class="dialog-close" data-close-dialog aria-label="关闭边坡剖面">×</button></div><div class="slope-zoom-toolbar"><span id="slope-zoom-caption"></span><button id="slope-zoom-toggle" type="button" aria-pressed="false">放大至 2 倍</button></div><div id="slope-zoom-content" tabindex="0" aria-label="边坡图，放大后可以横向滚动查看"></div><p class="dialog-caption">同一工况的已计算滑面；放大后可横向滚动查看。合成剖面，非现场稳定性判定。</p></dialog>
+    </section>
+
+    <section class="details container" id="details" aria-labelledby="details-title">
+      <div class="details-intro"><p class="eyebrow">A CLOSER LOOK</p><h2 id="details-title">再深入一点。</h2><p>方法与成果背后的技术细节。</p></div>
+      <div class="detail-list">
+        <details><summary><span><small>01</small>如何从二维轮廓找到三维表面？</span><span class="detail-plus" aria-hidden="true">+</span></summary><div class="detail-body"><p>使用与摄影测量一致的 Brown 相机模型，将目标轮廓内的像素转换为射线，选择网格的首个交点。再在命中三角形的邻接子图中，依据独立像素支持选择主要连通分量，减少邻石、背面与孤立碎片影响。</p><p class="detail-meta">Visible-Surface Association v1 · 方法已冻结</p></div></details>
+        <details><summary><span><small>02</small>多视角信息如何整合？</span><span class="detail-plus" aria-hidden="true">+</span></summary><div class="detail-body"><p>人工核验案例对每个视角独立进行表面关联，并在同一网格拓扑上按三角形 ID 整合。不同颜色表示不同视角的贡献。保留有效的单视角侧面，不用多视角支持数量简单代替几何判断。</p><p>首屏模型来自 CAL_061 已保存的核验表面；旋转只改变展示视角。多视角可见表面不等同于完整岩体。后续自动桥接已实现批量执行、缓存与 QA 输出，其自动融合仍处于实验验证阶段。</p></div></details>
+        <details><summary><span><small>03</small>几何尺寸与后续研究</span><span class="detail-plus" aria-hidden="true">+</span></summary><div class="detail-body"><p>CAL_064 示例复用已保存的 RAW 定向包围盒结果。E1 ≥ E2 ≥ E3 是可见表面的排序 OBB 边长，尚不代表现场测量方向 A / B / C，也不构成现场真尺寸精度结论。</p><p>项目持续推进几何定义、现场验证与更大范围应用。正式现场精度、80 岩石验证、Z1/Z2/Z3 生产处理及正式粒径分布仍待开展。</p><p class="detail-meta">当前展示：已冻结几何核心 + 实验性自动桥接 · 尺度修正未计入本页示例</p></div></details>
+      </div>
+    </section>
+    <section class="closing container"><div><p class="eyebrow">Rock3D / VISION · GEOMETRY · APPLICATION</p><h2>从看见每一块岩石，<span>到支持每一步工程判断。</span></h2></div><a class="back-top" href="#top" aria-label="返回首页顶部">↑</a></section>
+  </main>
+  <footer class="container"><div class="footer-brand">Rock3D <span>工程视觉 · 摄影测量 · 三维测量</span></div><div class="footer-right"><span>中国矿业大学（北京）</span><a href="https://github.com/AcKakaa/rock3d-portfolio" target="_blank" rel="noopener noreferrer">GitHub ↗</a><span>2026.10</span></div></footer>
+  <dialog class="media-dialog" id="video-dialog" aria-labelledby="video-dialog-title"><div class="dialog-heading"><div><p class="eyebrow">MULTI-VIEW SHOWCASE</p><h2 id="video-dialog-title">多一个视角，多一份可见表面。</h2></div><button type="button" class="dialog-close" data-close-dialog aria-label="关闭视频">×</button></div><video id="showcase-video" controls playsinline preload="none" poster="assets/preview/video-poster-1600.webp"><source data-src="assets/videos/CAL_061_showcase_display_only_v1.mp4" type="video/mp4">你的浏览器暂不支持该视频。</video><p class="dialog-caption">CAL_061 · 已核验的多视角可见表面整合。颜色表示视角贡献，展示模型与原研究几何保持一致。</p></dialog>
+  <dialog class="media-dialog image-dialog" id="measurement-dialog" aria-labelledby="measurement-dialog-title"><div class="dialog-heading"><div><p class="eyebrow">CAL_064 / RAW OBB</p><h2 id="measurement-dialog-title">三维表面与几何尺寸</h2></div><button type="button" class="dialog-close" data-close-dialog aria-label="关闭尺寸图">×</button></div><img src="assets/preview/cal064-measurement-1600.webp" width="1025" height="660" alt="放大的 CAL_064 已保存表面与 RAW 定向包围盒"><p class="dialog-caption">E1 528.1 mm · E2 429.9 mm · E3 392.3 mm。RAW_UNCORRECTED；E* 为排序 OBB 边长，非现场 A/B/C。</p></dialog>
+</body>
+</html>

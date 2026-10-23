@@ -1,0 +1,80 @@
+{
+  "official": [
+    {
+      "representation": "R",
+      "oa": 0.7278491908753765,
+      "macro_f1": 0.5960559092976139,
+      "miou": 0.4580915517585356
+    },
+    {
+      "representation": "Q",
+      "oa": 0.7067700963736776,
+      "macro_f1": 0.5812416747817439,
+      "miou": 0.442652651959561
+    },
+    {
+      "representation": "S",
+      "oa": 0.7182938217706812,
+      "macro_f1": 0.5945592384692718,
+      "miou": 0.4557675446265361
+    }
+  ],
+  "internal": [
+    {
+      "representation": "R",
+      "oa": 0.8746752776311568,
+      "macro_f1": 0.8048828732245554,
+      "miou": 0.6853909409317737,
+      "sulphide": {
+        "precision": 0.603671706263499,
+        "recall": 0.7282550387002835,
+        "f1": 0.6601368483206558,
+        "tp": 9503,
+        "fp": 6239,
+        "fn": 3546,
+        "shale_to_sulphide": 2347,
+        "sulphide_to_shale": 1386,
+        "shale_fraction_of_sulphide_fp": 0.37618208046161244
+      }
+    },
+    {
+      "representation": "Q",
+      "oa": 0.8485698416148318,
+      "macro_f1": 0.7654833983034875,
+      "miou": 0.6381776579955262,
+      "sulphide": {
+        "precision": 0.5230622352168984,
+        "recall": 0.6717756149896544,
+        "f1": 0.5881642512077294,
+        "tp": 8766,
+        "fp": 7993,
+        "fn": 4283,
+        "shale_to_sulphide": 2981,
+        "sulphide_to_shale": 1632,
+        "shale_fraction_of_sulphide_fp": 0.37295133241586387
+      }
+    },
+    {
+      "representation": "S",
+      "oa": 0.8518921007510445,
+      "macro_f1": 0.7707212437458235,
+      "miou": 0.6461229974220615,
+      "sulphide": {
+        "precision": 0.5372511848341233,
+        "recall": 0.651544179630623,
+        "f1": 0.5889035118099328,
+        "tp": 8502,
+        "fp": 7323,
+        "fn": 4547,
+        "shale_to_sulphide": 2510,
+        "sulphide_to_shale": 1543,
+        "shale_fraction_of_sulphide_fp": 0.3427557012153489
+      }
+    }
+  ],
+  "populations": {
+    "official_test": 2573213,
+    "internal_training_pool": 289863
+  },
+  "limitation": "Different populations; do not interpret score difference as method improvement."
+}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080f11">
+  <meta name="description" content="纪亨东的高光谱地质研究项目：从公开小样例到324万点Tinto数据适配、三维岩性分区、光谱对照与内部空间验证。">
+  <title>高光谱 × 三维地质｜岩性分区与空间验证</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="application.css">
+  <script src="data.js" defer></script>
+  <script src="script.js" defer></script>
+  <script src="application.js" defer></script>
+  <link rel="stylesheet" href="../project-nav.css">
+</head>
+<body>
+  <a class="skip" href="#main">跳转到项目内容</a>
+  <div class="portfolio-switcher"><div class="portfolio-switcher-inner">
+  <a class="portfolio-home" href="../"><span aria-hidden="true">←</span> 项目总览</a>
+  <nav class="portfolio-projects" aria-label="切换项目"><a href="../rock3d/">Rock3D</a><a href="../hyperspectral/" aria-current="page">高光谱 × 三维地质</a></nav>
+</div></div>
+  <header class="header wrap">
+    <a class="brand" href="#top" aria-label="高光谱地质项目首页"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m2 23 9-15 8 11 6-8 5 12M2 28h28M10 23l4-6 5 8"/><path d="M22 3v6M19 6h6"/></svg><span>光谱<span class="accent"> × </span>地质</span><small>HYPERSPECTRAL · 3D</small></a>
+    <nav aria-label="页面导航"><a href="#results">成果与评估</a><a href="#work">项目工作</a><a href="#application-demo" class="sister">工程设想 ↗</a></nav>
+  </header>
+  <main id="main">
+    <section id="top" class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="dot"></span> HYPERSPECTRAL GEOLOGY / RESEARCH PROJECT</p>
+        <h1 id="hero-title">从光谱差异，<br>到三维<span class="accent">岩性分区。</span></h1>
+        <p class="hero-description">连接短波红外光谱、机器学习与三维表面，<br>让分类结果有空间位置，也有验证依据。</p>
+        <div class="hero-actions"><a class="button primary" href="#results">查看研究成果 <span aria-hidden="true">↗</span></a><a class="text-link" href="downloads/project-brief.md" download>下载项目摘要 <span aria-hidden="true">↓</span></a></div>
+        <p class="hero-meta">纪亨东 <span> / </span> 矿业工程 × 软件工程 <span> / </span> 个人研究项目</p>
+      </div>
+      <article class="viewer" aria-labelledby="viewer-title">
+        <div class="panel-heading"><span id="viewer-title"><span class="cross">+</span> TINTO / 3D LITHOLOGY</span><span class="live-tag">已保存实验结果</span></div>
+        <button type="button" class="hero-image image-open" data-image="assets/full-comparison.webp" data-title="同一批测试点的提供标签与 R/Q/S 预测" data-caption="完整图件：各面板使用相同的 30000 个官方测试显示点，未经平滑；仅为显示抽样。坐标单位及 CRS 未核实。" aria-label="放大三维岩性分类完整图件">
+          <img id="hero-view" src="assets/view-R.webp" width="774" height="434" alt="原始反射率 R 的三维岩性预测，裁切自保存的完整对照图">
+          <span class="zoom-hint" aria-hidden="true">⤢ 查看完整图件</span>
+        </button>
+        <div class="viewer-bottom">
+          <div class="view-label"><span class="dot"></span><span id="view-caption" aria-live="polite">R · 原始反射率预测</span><small>同一批 30,000 显示点</small></div>
+          <div class="view-tabs" role="group" aria-label="切换三维结果面板">
+            <button type="button" data-view="labels" aria-pressed="false">提供标签</button><button type="button" data-view="R" aria-pressed="true">R · 反射率</button><button type="button" data-view="Q" aria-pressed="false">Q · 连续统去除</button><button type="button" data-view="S" aria-pressed="false">S · 吸收形状</button>
+          </div>
+          <div class="class-legend" aria-label="岩性类别图例"><span style="--c:#1f77b4">风化残积物</span><span style="--c:#ff7f0e">硅质岩</span><span style="--c:#2ca02c">硫化物类</span><span style="--c:#d62728">页岩</span><span style="--c:#9467bd">镁铁质火山岩</span><span style="--c:#8c564b">长英质火山岩</span></div>
+        </div>
+      </article>
+    </section>
+
+    <div class="scale-strip wrap" aria-label="研究数据规模"><div><strong>324<span>万点</span></strong><p>Tinto 完整高光谱点云</p></div><div><strong>51<span>波段</span></strong><p>2104.60–2378.67 nm</p></div><div><strong>6<span>类岩性</span></strong><p>共同有效非植被样本</p></div><div><strong>3<span>折空间验证</span></strong><p>训练区内分块 + 距离缓冲</p></div></div>
+
+    <section id="results" class="wrap section" aria-labelledby="results-title">
+      <div class="section-head"><div><p class="eyebrow">FIXED CONDITIONS / MEASURABLE RESULTS</p><h2 id="results-title">同一条件下比较，<br>把结果放回验证范围。</h2></div><p class="section-intro">三种光谱表示，同一固定随机森林。<br>样本、参数与评估范围均有记录。</p></div>
+      <article class="evaluation">
+        <div class="eval-top"><div class="scope-tabs" role="group" aria-label="选择评估范围"><button type="button" data-scope="official" aria-pressed="true">官方共同测试</button><button type="button" data-scope="internal" aria-pressed="false">内部空间验证</button></div><span id="population-tag" class="mono">n = 2,573,213 测试点</span></div>
+        <div id="metric-content" aria-live="polite">
+          <div class="main-score"><div><p id="scope-heading">原始反射率 R / 官方共同测试</p><strong id="main-f1">59.61<span>%</span></strong><small>宏 F1 · 六类等权平均</small></div><div class="other-scores"><p>总体准确率 <strong id="main-oa">72.78%</strong></p><p>平均交并比 <strong id="main-iou">45.81%</strong></p><span id="scope-detail">原官方训练 / 测试划分</span></div></div>
+          <div class="comparison-chart"><div class="chart-header"><span>光谱表示对照</span><span>宏 F1 / 相同评估点</span></div><div id="metric-bars"></div><div class="chart-axis" aria-hidden="true"><span>0</span><span>25</span><span>50</span><span>75</span><span>100%</span></div></div>
+        </div>
+        <div class="eval-bottom"><span class="finding"><span class="dot"></span> 本次两套评估中，R 均整体最好</span><a class="text-link" href="downloads/results.json" download>下载指标记录 ↓</a></div>
+      </article>
+      <p class="scope-note"><span aria-hidden="true">↳</span> 两套成绩来自不同点集，不能将差值称为方法提升。内部验证属于同矿区验证，尚未建立跨矿区泛化结论。</p>
+      <div class="method-strip"><span>固定随机森林</span><span>100 棵树</span><span>max_depth = 16</span><span>class_weight = balanced</span><span>seed = 42</span><details><summary>表示如何定义？</summary><p>R 为原始缩放反射率；Q 为上包络连续统去除 R/C；S 为 (1−Q)/‖1−Q‖₂。三种表示共用 51 波段及有效样本，XYZ 不进入分类器。min_samples_leaf=5；未按测试成绩调参。</p></details></div>
+    </section>
+
+    <section id="diagnostics" class="wrap section" aria-labelledby="diagnostics-title">
+      <div class="section-head"><div><p class="eyebrow">BEYOND THE OVERALL SCORE</p><h2 id="diagnostics-title">看见分区，<br>也追问误判在哪里。</h2></div><p class="section-intro">从三维位置回到光谱，<br>定位页岩与硫化物类的主要混淆。</p></div>
+      <div class="diagnostic-grid">
+        <article class="spectrum-panel">
+          <div class="card-heading"><div><p class="card-index">01 / SPECTRAL EVIDENCE</p><h3>相似的光谱，需要谨慎区分。</h3></div><div class="small-tabs" role="group" aria-label="选择训练参考光谱表示"><button type="button" data-spectrum="R" aria-pressed="true">R</button><button type="button" data-spectrum="Q" aria-pressed="false">Q</button></div></div>
+          <p class="card-copy">真实训练区参考 · 逐波段中位曲线与 p10–p90</p>
+          <svg id="spectrum-chart" viewBox="0 0 600 330" role="img" aria-label="训练区页岩和硫化物类的光谱中位数及类内变化范围"></svg>
+          <div class="spectrum-footer"><div class="curve-legend"><span style="--c:#92e6c9">硫化物类 · 13,049 点</span><span style="--c:#bf9beb">页岩 · 45,702 点</span></div><button id="spread-toggle" type="button" aria-pressed="true">隐藏类内范围</button></div>
+          <p class="fine">阴影表示类内逐波段变化范围，不是置信区间。曲线重叠提供诊断线索，不证明特定矿物或误判成因。</p>
+        </article>
+        <article class="error-panel">
+          <p class="card-index">02 / ERROR AUDIT</p><h3>硫化物误报，主要来自哪里？</h3><p class="card-copy">官方共同测试 · R 模型 · 相对提供标签</p>
+          <div class="error-number"><strong>87.54<span>%</span></strong><p>硫化物类假阳性中，<br>原标签为页岩的比例。</p></div>
+          <div class="error-bar" role="img" aria-label="173926个硫化物假阳性中，152249个来自页岩，21677个来自其他类别"><span></span></div>
+          <div class="error-counts"><span>页岩 <strong>152,249</strong></span><span>其他类别 <strong>21,677</strong></span></div>
+          <div class="precision-note"><div><span>硫化物类精确率</span><strong>31.62%</strong></div><div><span>硫化物类召回率</span><strong>65.80%</strong></div></div>
+          <button class="outline-button image-open" type="button" data-image="assets/sulphide-audit.webp" data-title="R 基线：硫化物类 TP / FP / FN 空间分布" data-caption="TN/TP/FP/FN 各显示 4000 点，显示比例不代表总体错误率或矿化丰度。颜色表示与提供标签的对应关系，不是矿体边界。">查看三维错误分布 <span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+      <article class="spatial-panel"><div class="spatial-copy"><p class="card-index">03 / SPATIAL VALIDATION</p><h3>把邻近点隔开，<br>再检查分类表现。</h3><p>在原训练区内构建 355 个三维空间块，使用三折分组分层划分。每折排除距验证点过近的拟合点，先检查六类覆盖，再运行固定模型。</p><div class="spatial-stats"><span><strong>289,863</strong>内部验证池</span><span><strong>9</strong>固定参数模型</span></div><p class="fine">块边长约 19.95，缓冲约 3.33，均为原生坐标数值单位；物理单位及 CRS 尚未核实。</p></div><button type="button" class="spatial-image image-open" data-image="assets/spatial-split.webp" data-title="原训练区内三折空间划分：XY / XZ" data-caption="每个空间块仅属于一个验证折；R/Q/S 共用划分，逐折应用距离缓冲。显示 30000 个训练池点，未使用官方测试点进行该步骤评分。" aria-label="放大内部空间划分图"><img src="assets/spatial-split.webp" width="1820" height="840" loading="lazy" alt="三折空间划分的 XY 和 XZ 投影，各折用不同颜色表示"><span class="zoom-hint" aria-hidden="true">⤢ 放大划分图</span></button></article>
+    </section>
+
+    <section id="work" class="wrap section" aria-labelledby="work-title">
+      <div class="section-head"><div><p class="eyebrow">FROM SAMPLE TO REPRODUCIBLE STUDY</p><h2 id="work-title">从小样例出发，<br>走通真实数据研究流程。</h2></div><p class="section-intro">数据处理、方法对照、空间解释，<br>形成能追溯输入与结论的项目成果。</p></div>
+      <div class="work-grid"><article><span class="work-index">01 / DATA</span><h3>数据适配与质量核查</h3><p>核查波长、缩放、标签和掩膜；保持光谱、坐标与原始点序一致。以分块和内存映射组织完整数据缓存。</p><small>ENVI / PLY · NumPy · 数据追溯</small></article><article><span class="work-index">02 / ANALYSIS</span><h3>光谱方法与固定对照</h3><p>从连续统去除、PCA 与聚类起步，建立 R/Q/S 表示对照和固定森林基线，保留无收益与负向结果。</p><small>hylite · scikit-learn · 逐类指标</small></article><article><span class="work-index">03 / VALIDATION</span><h3>空间验证与三维诊断</h3><p>核对逐行预测与混淆矩阵，展示岩性分区和误报位置；使用带缓冲的空间验证检查内部稳健性。</p><small>空间分块 · 光谱统计 · 可复现归档</small></article></div>
+      <div class="journey"><div class="journey-intro"><p class="eyebrow">RESEARCH JOURNEY</p><h3>每一步，都留下验证记录。</h3><p>展开查看从学习基线到正式实验的推进。</p></div><div class="journey-steps">
+        <details><summary><span>01</span><strong>hylite 小样例基线</strong><small>读取 · 吸收特征 · 聚类</small><b>+</b></summary><p>完成二维影像、光谱库与已有高光谱点云的读取；开展连续统去除、PCA / K-means 对照、USGS 三条参考谱探索及三维属性展示。聚类一致性不等于识别准确率，参考谱比较未建立独立矿物真值。</p></details>
+        <details><summary><span>02</span><strong>Tinto Mini 适配</strong><small>标签 · 点序 · 流程演示</small><b>+</b></summary><p>核查 303388 点 Mini 的缩放、波长、掩膜、标签字典和点序，打通岩性预测及三维对照。Mini 演示成绩不作为完整数据正式基准结果。</p></details>
+        <details><summary><span>03</span><strong>针对性质控试验</strong><small>构造注入 · 真实告警</small><b>+</b></summary><p>检验固定孤立单波段下陷规则；受控注入仅在预设强下陷情景中有效，未证明一般降噪收益。真实训练区 63513 个有效点中 2 点触发，保留为候选告警，未自动修复正式数据。</p></details>
+        <details><summary><span>04</span><strong>完整数据固定对照</strong><small>324 万点 · R / Q / S</small><b>+</b></summary><p>完成完整 ZIP 校验与选定成员适配；共同有效训练 289863 点、测试 2573213 点。冻结表示、森林参数及官方/距离子集范围，报告逐类与总体结果。</p></details>
+        <details><summary><span>05</span><strong>三维错误解释</strong><small>预测核对 · 光谱分组</small><b>+</b></summary><p>用保存预测重建混淆矩阵，生成三维分区和误差图；比较页岩—硫化物正确/错误组的光谱、亮度和点距分布。诊断为描述性分析，不建立误判成因的因果结论。</p></details>
+        <details><summary><span>06</span><strong>内部空间验证与归档</strong><small>三折 · 缓冲 · 已完成</small><b>+</b></summary><p>仅在原训练区内实施固定三折空间划分与缓冲，完成 R/Q/S 共 9 次拟合。核对各折计数、合并混淆矩阵和重算指标，保留协议、模型、预测与阶段小结。</p></details>
+      </div></div>
+    </section>
+
+    <section id="application-demo" class="wrap section application" aria-labelledby="application-title">
+      <p class="eyebrow">DIGITAL MINE / APPLICATION CONCEPT</p><h2 id="application-title">从一片岩性分区，<br>到一次可记录的现场复核。</h2>
+      <p>把光谱分类接入矿山数字化场景：查看露头、定位待复核点、记录调查意见。<br>下方为交互概念模拟，展示未来工作流；上方研究结果保持独立。</p>
+      <article class="survey-app" aria-labelledby="survey-title">
+        <div class="survey-head"><div><p class="card-index">ENGINEERING SCENARIO / DEMO</p><h3 id="survey-title">露头调查辅助判读工作台</h3></div><span class="simulation-badge">概念模拟 · 合成场景</span></div>
+        <div class="survey-flow" aria-label="模拟工作流"><span><b>01</b> 查看分区</span><i>→</i><span><b>02</b> 选择复核点</span><i>→</i><span><b>03</b> 记录与导出</span></div>
+        <div class="survey-body">
+          <div class="survey-scene">
+            <div class="survey-toolbar"><div class="survey-layer-tabs" role="group" aria-label="合成露头图层"><button type="button" data-survey-layer="lithology" aria-pressed="true">岩性分区示意</button><button type="button" data-survey-layer="surface" aria-pressed="false">露头表面示意</button></div><button id="survey-reset-view" type="button" title="恢复初始观察角度">复位视角 ↺</button></div>
+            <div class="survey-canvas-wrap"><canvas id="survey-canvas" width="1000" height="640" tabindex="0" role="img" aria-label="可拖动旋转的合成台阶露头，含三个示例复核点；也可用左右方向键旋转，用右侧按钮选择复核点"></canvas><div class="scene-label"><span class="dot"></span> DEMO SITE / 归一化示意空间</div><div class="scene-hint">左右拖动旋转 · 点击标记查看</div><span class="scene-watermark">SYNTHETIC SCENE</span></div>
+            <div class="survey-scene-footer"><div class="class-legend"><span style="--c:#619eba">风化残积物</span><span style="--c:#e0b168">硅质岩</span><span style="--c:#92e6c9">硫化物类</span><span style="--c:#c47780">页岩</span><span style="--c:#a48cc9">镁铁质火山岩</span><span style="--c:#b99a7b">长英质火山岩</span></div><p>几何、类别分布和标记均为合成示意，未接入真实矿区。</p></div>
+          </div>
+          <aside class="survey-inspector" aria-labelledby="survey-inspector-title"><div class="inspector-title"><span id="survey-inspector-title">示例复核清单</span><span id="survey-count">0 / 3 已记录</span></div><div id="survey-task-list" class="survey-task-list" role="group" aria-label="选择示例复核点"><button type="button" data-survey-task="0" aria-pressed="true"><span>P01</span><strong>谱形相近区</strong><small>待记录</small></button><button type="button" data-survey-task="1" aria-pressed="false"><span>P02</span><strong>类别边界区</strong><small>待记录</small></button><button type="button" data-survey-task="2" aria-pressed="false"><span>P03</span><strong>表面差异区</strong><small>待记录</small></button></div>
+            <div class="survey-task-detail" aria-live="polite"><p class="card-index" id="survey-point-id">P01 / DEMO CHECKPOINT</p><h4 id="survey-point-name">谱形相近区</h4><p id="survey-point-coordinates" class="mono"></p><dl><div><dt>示例候选类别</dt><dd id="survey-point-classes">页岩 / 硫化物类</dd></div><div><dt>复核关注</dt><dd id="survey-point-reason">检查谱形差异，并结合现场岩性描述核实。</dd></div></dl></div>
+            <label for="survey-note" class="survey-note-label">模拟调查记录</label><textarea id="survey-note" rows="3" maxlength="300" placeholder="填写示例复核意见；不作为真实调查或鉴定结论。"></textarea><button type="button" id="survey-save" class="button primary">保存此点模拟记录</button><p id="survey-message" class="survey-message" role="status">记录仅保留在当前页面，刷新后清除。</p><button type="button" id="survey-export" class="outline-button">导出模拟记录 JSON <span aria-hidden="true">↓</span></button>
+          </aside>
+        </div>
+        <details class="survey-boundaries"><summary>模拟说明与实际落地条件 <span>+</span></summary><p>这是页面中的工程交互原型：台阶露头、岩性分布、复核点及关注原因均为人为构造，未调用真实模型进行推理，也未计算分类置信度或找矿优先级。“已记录”仅表示填写并保存了页面记录，不代表通过现场核验。记录仅在当前页面内存中保存，可导出至本机。</p><p>实际部署仍需真实场景及坐标系统、数据采集与配准、模型适用性验证、现场采样鉴定和业务系统接入。本页未据此宣称矿体圈定、品位估计或生产平台落地。</p></details>
+      </article>
+      <div class="application-flow"><span class="done">光谱分析</span><i>→</i><span class="done">岩性分区</span><i>→</i><span class="done">可靠性检查</span><i>⇢</i><span>独立地质核验</span><i>⇢</i><span>多源找矿应用</span></div><small>前三项已有本项目研究成果；独立地质核验及多源找矿应用为后续方向，模拟画面不改变这一边界。</small>
+    </section>
+
+    <section class="wrap details-section" aria-labelledby="details-title"><div><p class="eyebrow">METHODS / SOURCES / BOUNDARIES</p><h2 id="details-title">再深入一点。</h2><p>数据、方法与成果的适用边界。</p><a class="text-link" href="downloads/project-brief.md" download>下载完整项目摘要 ↓</a></div><div class="faq">
+      <details><summary>这个项目与 Rock3D 有什么关系？<span>+</span></summary><p>两者是独立项目，共享点云属性对应、空间展示和可复现流程的经验。本项目使用已有光谱属性的点云，没有完成原始二维影像到点云的配准或光谱投影，也未与 Rock3D 数据融合。</p></details>
+      <details><summary>这些成绩能够证明什么？<span>+</span></summary><p>成绩衡量与 Tinto 提供岩性标签的一致性。单矿区及标签来源限制仍然存在，不能等同于逐点独立化验、矿体识别、品位估计或跨矿区能力。内部空间成绩与官方共同测试成绩来自不同点集。</p></details>
+      <details><summary>项目工作如何完成？<span>+</span></summary><p>使用公开数据及开源工具，在实验室组织和执行数据处理、对照实验与结果核查，并借助 AI 辅助方案讨论、代码编写和调试。形成代码、缓存、参数、模型、预测、图件及报告；没有宣称原创分类算法或生产平台落地。</p></details>
+      <details><summary>数据与开源依赖来自哪里？<span>+</span></summary><p>Tinto 数据发布：<a href="https://doi.org/10.14278/rodare.2256" target="_blank" rel="noopener noreferrer">DOI 10.14278/rodare.2256 ↗</a>。小样例与光谱处理基于 <a href="https://github.com/hifexplo/hylite" target="_blank" rel="noopener noreferrer">hylite ↗</a>；早期参考谱来自 USGS Spectral Library Version 7（DOI 10.5066/F7RR1WDJ）。技术栈为 Python、NumPy、SciPy、scikit-learn、Matplotlib、plyfile。网页复用已保存结果与统计，不运行新推理或训练。</p></details>
+    </div></section>
+    <section class="closing wrap"><div><p class="eyebrow">SPECTRA · SPACE · EVIDENCE</p><h2>让每一处颜色，<span>都有可追溯的依据。</span></h2></div><a class="back-top" href="#top" aria-label="返回顶部">↑</a></section>
+  </main>
+  <footer class="wrap"><div><strong>纪亨东</strong><span>中国矿业大学（北京） · 2027 届矿业工程硕士</span></div><div><a href="../rock3d/" target="_blank" rel="noopener noreferrer">另一个项目 / Rock3D ↗</a><span>成果记录至 2026.10</span></div></footer>
+  <dialog id="image-dialog" aria-labelledby="dialog-title"><div class="dialog-head"><div><p class="eyebrow">SAVED RESEARCH FIGURE</p><h2 id="dialog-title">实验图件</h2></div><button id="dialog-close" type="button" aria-label="关闭图件">×</button></div><div class="dialog-image-wrap"><img id="dialog-image" alt=""></div><p id="dialog-caption"></p><a id="dialog-original" class="text-link" href="assets/full-comparison.webp" target="_blank" rel="noopener noreferrer">打开原尺寸图件 ↗</a></dialog>
+</body>
+</html>
